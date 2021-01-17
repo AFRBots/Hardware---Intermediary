@@ -5,6 +5,7 @@ using System.Threading;
 using System.IO;
 using System.IO.Ports;
 using System.Threading.Tasks;
+using System.Net.WebSockets;
 
 namespace Hardware___Intermetiary.CarClasses
 {
@@ -14,17 +15,22 @@ namespace Hardware___Intermetiary.CarClasses
         public Sensor direction;
         public SerialPort Port;
         public string Name;
-        public Car(string name,string portName)
+        ClientWebSocket _ws;
+        string test = "";
+        public Car(string name,string portName, ClientWebSocket ws)
         {
-            Port = new SerialPort(portName, 9600);
-            Port.Open();
+            //Port = new SerialPort(portName, 9600);
+            //Port.Open();
             Name = name;
             proximity = new Sensor("proximity");
             direction = new Sensor("direction");
-            Thread t = new Thread(updateSensors);
-            t.IsBackground = true;
-            t.Start();
-
+            _ws = ws;
+            //Thread t = new Thread(updateSensors);
+            //t.IsBackground = true;
+            //t.Start();
+            Thread g = new Thread(getCommands);
+            g.IsBackground = true;
+            g.Start();
         }
         public void moveForward()
         {
@@ -88,6 +94,17 @@ namespace Hardware___Intermetiary.CarClasses
                         }
                     }
                 }
+            }
+        }
+        private async void getCommands()
+        {
+            byte[] buffer = new byte[1024];
+            while (true)
+            {
+                await _ws.ReceiveAsync(buffer, CancellationToken.None);
+                var response = System.Text.Encoding.UTF8.GetString(buffer);
+                var del = new Action(() => test = response);
+                del.Invoke();
             }
         }
     }

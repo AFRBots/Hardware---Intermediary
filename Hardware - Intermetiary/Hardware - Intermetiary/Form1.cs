@@ -50,12 +50,15 @@ namespace Hardware___Intermetiary
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             PortForm p = new PortForm();
             if (p.ShowDialog() == DialogResult.OK)
             {
-                _Car = new Car("Car1", p._Port);
+                
+                ClientWebSocket ws = new ClientWebSocket();
+                await ws.ConnectAsync(new Uri("wss://bots.rafee.me"), CancellationToken.None);
+                _Car = new Car("Car1", p._Port,ws);
                 Thread t = new Thread(updateSensors);
                 t.IsBackground = true;
                 t.Start();
@@ -93,8 +96,12 @@ namespace Hardware___Intermetiary
         }
         private void updateSensors()
         {
-            Invoke(new Action(()=>lblDirection.Text = _Car.direction.value.ToString()));
-            Invoke(new Action(()=>lblProximity.Text = _Car.proximity.value.ToString()));
+            while (true)
+            {
+                Invoke(new Action(() => lblDirection.Text = _Car.direction.value.ToString()));
+                Invoke(new Action(() => lblProximity.Text = _Car.proximity.value.ToString()));
+            }
+            
         }
     }
 }
