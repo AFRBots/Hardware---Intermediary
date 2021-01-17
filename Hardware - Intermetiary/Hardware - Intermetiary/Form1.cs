@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hardware___Intermetiary.CarClasses;
 using System.Net.WebSockets;
-
+using System.Threading;
 
 namespace Hardware___Intermetiary
 {
     public partial class Form1 : Form
     {
         Car _Car;
+        ClientWebSocket _ws;
+        string _command;
 
         public Form1()
         {
@@ -23,6 +25,8 @@ namespace Hardware___Intermetiary
             this.KeyPreview = true;
             KeyDown += Form1_KeyDown;
             KeyUp += Form1_KeyUp;
+            _command = "0";
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -50,14 +54,21 @@ namespace Hardware___Intermetiary
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             PortForm p = new PortForm();
             if (p.ShowDialog() == DialogResult.OK)
             {
                 _Car = new Car("Car1", p._Port);
                 updateSensorsAsync();
+
+                _ws = new ClientWebSocket();
+                await _ws.ConnectAsync(new Uri("wss://bots.rafee.me"), CancellationToken.None);
+
+                Task.Run(getCommmands).ConfigureAwait(false);
+                Task.Run(sendCommmands).ConfigureAwait(false);
             }
+            
         }
 
         //Moves UP
@@ -99,6 +110,29 @@ namespace Hardware___Intermetiary
             {
                 lblDirection.Text = _Car.direction.value.ToString();
                 lblProximity.Text = _Car.proximity.value.ToString();
+            }
+        }
+        private async Task getCommmands()
+        {
+            byte[] buffer = new byte[1024];
+
+            while (true)
+            {
+                await _ws.ReceiveAsync(buffer, CancellationToken.None);
+                
+                var response = System.Text.Encoding.UTF8.GetString(buffer);
+
+            }
+        }
+        private async Task sendCommmands()
+        {
+            
+
+            while (true)
+            {
+                await Task.Delay(500);
+                Console.WriteLine(_command);
+
             }
         }
     }
