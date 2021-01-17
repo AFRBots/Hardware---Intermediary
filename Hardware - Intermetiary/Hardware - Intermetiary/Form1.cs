@@ -56,6 +56,7 @@ namespace Hardware___Intermetiary
             if (p.ShowDialog() == DialogResult.OK)
             {
                 _Car = new Car("Car1", p._Port);
+                updateSensorsAsync();
             }
         }
 
@@ -87,6 +88,18 @@ namespace Hardware___Intermetiary
         {
             lblDirection.Text = _Car.direction.value.ToString();
             lblProximity.Text = _Car.proximity.value.ToString();
+        }
+        private async void updateSensorsAsync()
+        {
+            await Task.Run(updateSensors);
+        }
+        private void updateSensors()
+        {
+            while (true)
+            {
+                lblDirection.Text = _Car.direction.value.ToString();
+                lblProximity.Text = _Car.proximity.value.ToString();
+            }
         }
     }
 }
