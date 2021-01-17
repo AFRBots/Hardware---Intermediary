@@ -21,7 +21,9 @@ namespace Hardware___Intermetiary.CarClasses
             Name = name;
             proximity = new Sensor("proximity");
             direction = new Sensor("direction");
-            Task.Run(() => updateSensorsAsync());
+            Thread t = new Thread(updateSensors);
+            t.IsBackground = true;
+            t.Start();
 
         }
         public void moveForward()
@@ -44,7 +46,11 @@ namespace Hardware___Intermetiary.CarClasses
         {
             Port.Write("<0>");
         }
-        public void updateSensorsAsync()
+        private async void updateSensorsAsync()
+        {
+            await Task.Run(updateSensors);
+        }
+        public void updateSensors()
         {
             while (true)
             {
@@ -57,14 +63,14 @@ namespace Hardware___Intermetiary.CarClasses
                 while (Port.BytesToRead > 0 || inProgress == true)
                 {
                     readChar = Convert.ToChar(Port.ReadChar());
-                    if (readChar == '<')
+                    if (readChar == '{')
                     {
                         inProgress = true;
                         //reading = proximity;
                     }
                     else if (inProgress)
                     {
-                        if (readChar != '>')
+                        if (readChar != '}')
                         {
                             recievedChar[index] = readChar;
                             index++;

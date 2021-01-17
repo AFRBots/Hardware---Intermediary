@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hardware___Intermetiary.CarClasses;
 using System.Net.WebSockets;
-
+using System.Threading;
 
 namespace Hardware___Intermetiary
 {
@@ -56,7 +56,9 @@ namespace Hardware___Intermetiary
             if (p.ShowDialog() == DialogResult.OK)
             {
                 _Car = new Car("Car1", p._Port);
-                updateSensorsAsync();
+                Thread t = new Thread(updateSensors);
+                t.IsBackground = true;
+                t.Start();
             }
         }
 
@@ -89,17 +91,10 @@ namespace Hardware___Intermetiary
             lblDirection.Text = _Car.direction.value.ToString();
             lblProximity.Text = _Car.proximity.value.ToString();
         }
-        private async void updateSensorsAsync()
-        {
-            await Task.Run(updateSensors);
-        }
         private void updateSensors()
         {
-            while (true)
-            {
-                lblDirection.Text = _Car.direction.value.ToString();
-                lblProximity.Text = _Car.proximity.value.ToString();
-            }
+            Invoke(new Action(()=>lblDirection.Text = _Car.direction.value.ToString()));
+            Invoke(new Action(()=>lblProximity.Text = _Car.proximity.value.ToString()));
         }
     }
 }
