@@ -1,0 +1,28 @@
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\Hardware - Intermetiary.exe
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\Hardware - Intermetiary.deps.json
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\Hardware - Intermetiary.runtimeconfig.json
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\Hardware - Intermetiary.runtimeconfig.dev.json
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\Hardware - Intermetiary.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\ref\Hardware - Intermetiary.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\Hardware - Intermetiary.pdb
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\System.IO.Ports.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\runtimes\linux\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\runtimes\osx\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.csprojAssemblyReference.cache
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware___Intermetiary.Form1.resources
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware___Intermetiary.PortForm.resources
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.csproj.GenerateResource.cache
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.AssemblyInfoInputs.cache
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.AssemblyInfo.cs
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.csproj.CoreCompileInputs.cache
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.csproj.CopyComplete
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\ref\Hardware - Intermetiary.dll
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.pdb
+C:\Users\Taras Levytskyy\Desktop\HackED\HardwareClient---Laptop\Hardware - Intermetiary\Hardware - Intermetiary\obj\Debug\net5.0-windows\Hardware - Intermetiary.genruntimeconfig.cache
