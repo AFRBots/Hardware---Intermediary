@@ -19,7 +19,34 @@ namespace Hardware___Intermetiary
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            KeyDown += Form1_KeyDown;
+            KeyUp += Form1_KeyUp;
+        }
 
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            _Car.moveStop();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.W)
+            {
+                _Car.moveForward();
+            }
+            if (e.KeyCode == Keys.S)
+            {
+                _Car.moveBack();
+            }
+            if (e.KeyCode == Keys.A)
+            {
+                _Car.moveLeft();
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                _Car.moveRight();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,14 +58,28 @@ namespace Hardware___Intermetiary
             }
         }
 
+        //Moves UP
         private void button1_Click(object sender, EventArgs e)
         {
             _Car.moveForward();
         }
 
+        //Moves DOWN
         private void button2_Click(object sender, EventArgs e)
         {
             _Car.moveBack();
+        }
+
+        //Moves Left
+        private void button3_Click(object sender, EventArgs e)
+        {
+            _Car.moveLeft();
+        }
+
+        //Moves Right
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _Car.moveRight();
         }
     }
 }

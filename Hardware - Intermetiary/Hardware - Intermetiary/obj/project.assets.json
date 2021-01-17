@@ -433,20 +433,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Taras\\.nuget\\packages\\": {}
+    "C:\\Users\\Arren Ting\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Taras\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
+      "projectUniqueName": "C:\\Users\\Arren Ting\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
       "projectName": "Hardware - Intermetiary",
-      "projectPath": "C:\\Users\\Taras\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
-      "packagesPath": "C:\\Users\\Taras\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Taras\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\obj\\",
+      "projectPath": "C:\\Users\\Arren Ting\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
+      "packagesPath": "C:\\Users\\Arren Ting\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Arren Ting\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Taras\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Arren Ting\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
@@ -494,7 +501,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

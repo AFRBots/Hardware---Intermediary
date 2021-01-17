@@ -6,8 +6,10 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Taras\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Taras\\.nuget\\packages"
+      "C:\\Users\\Arren Ting\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Arren Ting\\.nuget\\packages",
+      "C:\\Microsoft\\Xamarin\\NuGet",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
