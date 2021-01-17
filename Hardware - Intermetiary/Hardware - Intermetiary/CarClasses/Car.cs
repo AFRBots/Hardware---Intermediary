@@ -15,20 +15,13 @@ namespace Hardware___Intermetiary.CarClasses
         public Sensor direction;
         public SerialPort Port;
         public string Name;
-        ClientWebSocket _ws;
-        string test = "";
-        public Car(string name,string portName, ClientWebSocket ws)
+        public Car(string name,string portName)
         {
-            //Port = new SerialPort(portName, 9600);
-            //Port.Open();
+            Port = new SerialPort(portName, 9600);
+            Port.Open();
             Name = name;
             proximity = new Sensor("proximity");
             direction = new Sensor("direction");
-            _ws = ws;
-            Task.Run(getCommandsAsync);
-            //Thread t = new Thread(updateSensors);
-            //t.IsBackground = true;
-            //t.Start();
 
         }
         public void moveForward()
@@ -50,10 +43,6 @@ namespace Hardware___Intermetiary.CarClasses
         public void moveStop()
         {
             Port.Write("<0>");
-        }
-        private async void updateSensorsAsync()
-        {
-            await Task.Run(updateSensors);
         }
         public void updateSensors()
         {
@@ -93,17 +82,6 @@ namespace Hardware___Intermetiary.CarClasses
                         }
                     }
                 }
-            }
-        }
-        private async Task getCommandsAsync()
-        {
-            byte[] buffer = new byte[1024];
-            while (true)
-            {
-                await _ws.ReceiveAsync(buffer, CancellationToken.None);
-                var response = System.Text.Encoding.UTF8.GetString(buffer);
-                new Action(()=>Port.Write($"<{response}>")).Invoke();
-                
             }
         }
 

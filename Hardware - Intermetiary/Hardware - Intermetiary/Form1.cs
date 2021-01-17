@@ -16,6 +16,7 @@ namespace Hardware___Intermetiary
     public partial class Form1 : Form
     {
         Car _Car;
+        ClientWebSocket ws;
 
         public Form1()
         {
@@ -23,6 +24,7 @@ namespace Hardware___Intermetiary
             this.KeyPreview = true;
             KeyDown += Form1_KeyDown;
             KeyUp += Form1_KeyUp;
+            
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -56,12 +58,10 @@ namespace Hardware___Intermetiary
             if (p.ShowDialog() == DialogResult.OK)
             {
                 
-                ClientWebSocket ws = new ClientWebSocket();
+                ws = new ClientWebSocket();
                 await ws.ConnectAsync(new Uri("wss://bots.rafee.me"), CancellationToken.None);
-                _Car = new Car("Car1", p._Port,ws);
-                Thread t = new Thread(updateSensors);
-                t.IsBackground = true;
-                t.Start();
+                _Car = new Car("Car1", p._Port);
+                getCommands();
             }
         }
 
@@ -89,19 +89,29 @@ namespace Hardware___Intermetiary
             _Car.moveRight();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            lblDirection.Text = _Car.direction.value.ToString();
-            lblProximity.Text = _Car.proximity.value.ToString();
+            
         }
-        private void updateSensors()
+
+        private async void btnUpdate_Click(object sender, EventArgs e)
+        {
+            byte[] buffer = new byte[1024];
+            await ws.ReceiveAsync(buffer, CancellationToken.None);
+            var response = System.Text.Encoding.UTF8.GetString(buffer);
+            _Car.Port.Write($"<{response}>");
+            Invoke(new Action(() => lblDirection.Text = response));
+        }
+        private async Task getCommands()
         {
             while (true)
             {
-                Invoke(new Action(() => lblDirection.Text = _Car.direction.value.ToString()));
-                Invoke(new Action(() => lblProximity.Text = _Car.proximity.value.ToString()));
+                byte[] buffer = new byte[1024];
+                await ws.ReceiveAsync(buffer, CancellationToken.None);
+                var response = System.Text.Encoding.UTF8.GetString(buffer);
+                _Car.Port.Write($"<{response}>");
+                Invoke(new Action(() => lblDirection.Text = response));
             }
-            
         }
     }
 }
