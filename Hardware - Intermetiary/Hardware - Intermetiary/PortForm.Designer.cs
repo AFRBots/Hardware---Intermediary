@@ -37,27 +37,29 @@ namespace Hardware___Intermetiary
             // lbxPorts
             // 
             this.lbxPorts.FormattingEnabled = true;
-            this.lbxPorts.ItemHeight = 15;
-            this.lbxPorts.Location = new System.Drawing.Point(76, 48);
+            this.lbxPorts.ItemHeight = 20;
+            this.lbxPorts.Location = new System.Drawing.Point(87, 64);
+            this.lbxPorts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbxPorts.Name = "lbxPorts";
-            this.lbxPorts.Size = new System.Drawing.Size(152, 124);
+            this.lbxPorts.Size = new System.Drawing.Size(173, 164);
             this.lbxPorts.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(15, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 32);
+            this.label1.Size = new System.Drawing.Size(378, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select the car port below:";
             // 
             // btnSetPort
             // 
-            this.btnSetPort.Location = new System.Drawing.Point(110, 178);
+            this.btnSetPort.Location = new System.Drawing.Point(126, 237);
+            this.btnSetPort.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSetPort.Name = "btnSetPort";
-            this.btnSetPort.Size = new System.Drawing.Size(75, 23);
+            this.btnSetPort.Size = new System.Drawing.Size(105, 31);
             this.btnSetPort.TabIndex = 2;
             this.btnSetPort.Text = "Select Port";
             this.btnSetPort.UseVisualStyleBackColor = true;
@@ -65,15 +67,15 @@ namespace Hardware___Intermetiary
             // 
             // PortForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 218);
+            this.ClientSize = new System.Drawing.Size(365, 291);
             this.Controls.Add(this.btnSetPort);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbxPorts);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PortForm";
             this.Text = "PortForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PortForm_FormClosing);
             this.Load += new System.EventHandler(this.PortForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

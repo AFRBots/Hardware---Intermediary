@@ -36,10 +36,5 @@ namespace Hardware___Intermetiary
             DialogResult = DialogResult.OK;
         }
 
-        private void PortForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            e.Cancel = true;
-            DialogResult = DialogResult.Cancel;
-        }
     }
 }

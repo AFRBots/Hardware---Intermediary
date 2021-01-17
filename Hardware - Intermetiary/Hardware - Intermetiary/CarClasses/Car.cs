@@ -28,23 +28,23 @@ namespace Hardware___Intermetiary.CarClasses
         }
         public void moveForward()
         {
-            Port.Write("1");
+            Port.Write("<1>");
         }
         public void moveBack()
         {
-            Port.Write("2");
+            Port.Write("<2>");
         }
         public void moveRight()
         {
-            Port.Write("3");
+            Port.Write("<3>");
         }
         public void moveLeft()
         {
-            Port.Write("4");
+            Port.Write("<4>");
         }
         public void moveStop()
         {
-            Port.Write("0");
+            Port.Write("<0>");
         }
         //public void updateSensors()
         //{
