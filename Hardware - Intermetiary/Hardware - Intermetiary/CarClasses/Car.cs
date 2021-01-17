@@ -25,12 +25,11 @@ namespace Hardware___Intermetiary.CarClasses
             proximity = new Sensor("proximity");
             direction = new Sensor("direction");
             _ws = ws;
+            Task.Run(getCommandsAsync);
             //Thread t = new Thread(updateSensors);
             //t.IsBackground = true;
             //t.Start();
-            Thread g = new Thread(getCommands);
-            g.IsBackground = true;
-            g.Start();
+
         }
         public void moveForward()
         {
@@ -96,16 +95,18 @@ namespace Hardware___Intermetiary.CarClasses
                 }
             }
         }
-        private async void getCommands()
+        private async Task getCommandsAsync()
         {
             byte[] buffer = new byte[1024];
             while (true)
             {
                 await _ws.ReceiveAsync(buffer, CancellationToken.None);
                 var response = System.Text.Encoding.UTF8.GetString(buffer);
-                var del = new Action(() => test = response);
-                del.Invoke();
+                new Action(()=>Port.Write($"<{response}>")).Invoke();
+                
             }
         }
+
+        
     }
 }
