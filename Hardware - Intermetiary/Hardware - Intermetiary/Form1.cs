@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hardware___Intermetiary.CarClasses;
+using System.Net.WebSockets;
 
 
 namespace Hardware___Intermetiary
@@ -80,6 +81,12 @@ namespace Hardware___Intermetiary
         private void button4_Click(object sender, EventArgs e)
         {
             _Car.moveRight();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            lblDirection.Text = _Car.direction.value.ToString();
+            lblProximity.Text = _Car.proximity.value.ToString();
         }
     }
 }

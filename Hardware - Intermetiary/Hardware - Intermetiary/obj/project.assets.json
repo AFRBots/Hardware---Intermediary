@@ -433,27 +433,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Arren Ting\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Taras Levytskyy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arren Ting\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
+      "projectUniqueName": "C:\\Users\\Taras Levytskyy\\Desktop\\HackED\\HardwareClient---Laptop\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
       "projectName": "Hardware - Intermetiary",
-      "projectPath": "C:\\Users\\Arren Ting\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
-      "packagesPath": "C:\\Users\\Arren Ting\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arren Ting\\Desktop\\Hardware---Intermediary\\Hardware - Intermetiary\\Hardware - Intermetiary\\obj\\",
+      "projectPath": "C:\\Users\\Taras Levytskyy\\Desktop\\HackED\\HardwareClient---Laptop\\Hardware - Intermetiary\\Hardware - Intermetiary\\Hardware - Intermetiary.csproj",
+      "packagesPath": "C:\\Users\\Taras Levytskyy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Taras Levytskyy\\Desktop\\HackED\\HardwareClient---Laptop\\Hardware - Intermetiary\\Hardware - Intermetiary\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Arren Ting\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Taras Levytskyy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
